@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UYgNQ6j5WfxC8lxjfu31jagEz4ej5i2Z+TIBF8fmFtXIyLo6ujDrMZtzJvLEUG9rIdP3kjOYfg2usTu8qcXwNw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ngoca\\OneDrive\\Desktop\\KTPM\\KTPM\\KTPM\\KTPM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ngoca\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
