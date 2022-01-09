@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 import csv
+import time
 
 driver = webdriver.Chrome(executable_path='venv/Scripts/chromedriver.exe')
 driver.set_window_size(1300, 700)
@@ -41,8 +42,7 @@ class TraCuuDonHang:     #TestCase LO_01: lỗi
             driver.find_element(By.ID, 'dLabel').click()
             lo = driver.find_elements(By.XPATH, '//*[@id="box_donhang_vuadat"]/div[2]/table/tbody/tr/td[1]/a')
             print(lo)
-            driver.implicitly_wait(20)
-            driver.quit()
+            time.sleep(1)
 
         except Exception as ex:
             print('Lỗi')
@@ -198,7 +198,7 @@ TestCase = TraCuuDonHang()
 #TestCase.LO_03()
 #TestCase.LO_04()
 #TestCase.LO_05()
-TestCase.LO_06()
+#TestCase.LO_06()
 
 driver.quit()  # báo lỗi
 # driver.close()
