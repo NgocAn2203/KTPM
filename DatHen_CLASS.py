@@ -36,6 +36,8 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.ID, 'btnBooking').click()
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
+
         except Exception as ex:
             print('Lỗi')
             print()
@@ -76,6 +78,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
                 print('Lỗi')
@@ -116,6 +119,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -156,6 +160,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -197,6 +202,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -237,6 +243,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -276,6 +283,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -313,6 +321,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -350,6 +359,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
                 print(info.text)
+                driver.implicitly_wait(10)
 
         except Exception as ex:
             print('Lỗi')
@@ -367,6 +377,6 @@ Test = DatHen()
 #Test.BO_05()
 #Test.BO_06()
 #Test.BO_07()
-#Test.BO_08()
-Test.BO_09()
+Test.BO_08()
+#Test.BO_09()
 
