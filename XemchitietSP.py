@@ -16,7 +16,12 @@ driver.find_element(By.CSS_SELECTOR, '.actions > button').click()
 driver.find_element(By.CLASS_NAME, 'item_list_cate').click()
 
 results = driver.find_elements(By.CLASS_NAME, 'item_list_cate')
-#driver.find_element(By.CSS_SELECTOR,'#tab_sub_info > a:nth-child(1)').click()
+
+info = driver.find_element(By.CLASS_NAME, 'name_detail')
+print(info.text)
+info = driver.find_element(By.CLASS_NAME, 'txt_price')
+print(info.text)
 info = driver.find_element(By.CLASS_NAME, 'table_info_sp')
 print(info.text)
+
 driver.close()
