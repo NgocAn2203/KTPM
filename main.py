@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+driver = webdriver.Chrome(executable_path='venv/chromedriver.exe')
+driver.get('https://hasaki.vn/')
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+driver.set_window_size(1300, 700)
+driver.implicitly_wait(20)
+driver.find_element(By.ID, 'onesignal-slidedown-cancel-button').click()
+driver.implicitly_wait(20)
+driver.find_element(By.ID, 'search').click()
+driver.find_element(By.ID, 'search').send_keys('Kem chống nắng')
+driver.find_element(By.CSS_SELECTOR, '.actions > button').click()

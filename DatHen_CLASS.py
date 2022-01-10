@@ -6,7 +6,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import csv
 
-class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
+
+class DatHen:  # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
     def BO_01(self):
         driver = webdriver.Chrome(executable_path='venv/Scripts/chromedriver.exe')
         driver.set_window_size(1300, 700)
@@ -31,7 +32,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.XPATH,
                                     '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
                 driver.find_element(By.XPATH,
-                                    '//*[@id="block_input_time"]/div[3]/div/div[1]').click()  #Chọn thời gian khác
+                                    '//*[@id="block_input_time"]/div[3]/div/div[1]').click()  # Chọn thời gian khác
                 driver.implicitly_wait(10)
                 driver.find_element(By.ID, 'btnBooking').click()
                 info = driver.find_element(By.CLASS_NAME, 'block_info_success')
@@ -81,13 +82,13 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.implicitly_wait(10)
 
         except Exception as ex:
-                print('Lỗi')
-                print('Vui lòng nhập số điện thoại! ')
-                print()
-                print(ex)
+            print('Lỗi')
+            print('Vui lòng nhập số điện thoại! ')
+            print()
+            print(ex)
 
-                driver.implicitly_wait(10)
-                driver.quit()
+            driver.implicitly_wait(10)
+            driver.quit()
 
     def BO_03(self):
         driver = webdriver.Chrome(executable_path='venv/Scripts/chromedriver.exe')
@@ -230,7 +231,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.XPATH, '//*[@id="box_icon_category"]/div/div/div[7]').click()
                 driver.find_element(By.NAME, 'phone').send_keys(u)
                 driver.find_element(By.NAME, 'fullName').send_keys(p)
-                #driver.find_element(By.XPATH, '//*[@id="block_input_chinhanh"]/div[2]/div[2]/ul/li[2]/div/span').click()
+                # driver.find_element(By.XPATH, '//*[@id="block_input_chinhanh"]/div[2]/div[2]/ul/li[2]/div/span').click()
                 driver.find_element(By.XPATH,
                                     '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
 
@@ -272,7 +273,7 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.NAME, 'phone').send_keys(u)
                 driver.find_element(By.NAME, 'fullName').send_keys(p)
                 driver.find_element(By.XPATH, '//*[@id="block_input_chinhanh"]/div[2]/div[2]/ul/li[2]/div/span').click()
-                #driver.find_element(By.XPATH, '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
+                # driver.find_element(By.XPATH, '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
 
                 driver.find_element(By.XPATH,
                                     '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
@@ -312,10 +313,11 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.NAME, 'phone').send_keys(u)
                 driver.find_element(By.NAME, 'fullName').send_keys(p)
                 driver.find_element(By.XPATH, '//*[@id="block_input_chinhanh"]/div[2]/div[2]/ul/li[2]/div/span').click()
-                driver.find_element(By.XPATH, '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
+                driver.find_element(By.XPATH,
+                                    '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
 
-                #driver.find_element(By.XPATH, '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
-                #driver.find_element(By.XPATH,'//*[@id="block_input_time"]/div[3]/div/div[3]').click()  # Chọn thời gian khác
+                # driver.find_element(By.XPATH, '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
+                # driver.find_element(By.XPATH,'//*[@id="block_input_time"]/div[3]/div/div[3]').click()  # Chọn thời gian khác
                 driver.implicitly_wait(10)
                 driver.find_element(By.ID, 'btnBooking').click()
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
@@ -350,10 +352,13 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
                 driver.find_element(By.NAME, 'phone').send_keys(u)
                 driver.find_element(By.NAME, 'fullName').send_keys(p)
                 driver.find_element(By.XPATH, '//*[@id="block_input_chinhanh"]/div[2]/div[2]/ul/li[2]/div/span').click()
-                driver.find_element(By.XPATH, '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
+                driver.find_element(By.XPATH,
+                                    '//*[@id="block_input_danhmuc"]/div[1]/div[2]/div[2]/ul/li[2]/div/span').click()
 
-                driver.find_element(By.XPATH, '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
-                driver.find_element(By.XPATH,'//*[@id="block_input_time"]/div[3]/div/div[3]').click()  # Chọn thời gian khác
+                driver.find_element(By.XPATH,
+                                    '//*[@id="block_input_time"]/div[2]/div[2]/div[2]/ul/li[4]/div').click()  # Chọn thời gian khác
+                driver.find_element(By.XPATH,
+                                    '//*[@id="block_input_time"]/div[3]/div/div[3]').click()  # Chọn thời gian khác
                 driver.implicitly_wait(10)
                 driver.find_element(By.ID, 'btnBooking').click()
                 # info = driver.find_element(By.XPATH, '//*[@id="booking_sussces_page"]/div/div[2]/a')   #width_common block_info_succes
@@ -369,14 +374,14 @@ class DatHen:   # Nhớ thay đổi thời gian đặt hẹn trước khi chạy
             driver.implicitly_wait(10)
             driver.quit()
 
-Test = DatHen()
-#Test.BO_01()
-#Test.BO_02()
-#Test.BO_03()
-#Test.BO_04()
-#Test.BO_05()
-#Test.BO_06()
-#Test.BO_07()
-Test.BO_08()
-#Test.BO_09()
 
+Test = DatHen()
+# Test.BO_01()
+# Test.BO_02()
+# Test.BO_03()
+# Test.BO_04()
+# Test.BO_05()
+# Test.BO_06()
+# Test.BO_07()
+Test.BO_08()
+# Test.BO_09()
