@@ -25,4 +25,3 @@ info = driver.find_element(By.CLASS_NAME, 'table_info_sp')
 print(info.text)
 
 driver.close()
-# thêm comment
